@@ -1,0 +1,4 @@
+== Pixie Pinball Engine
+
+The idea is a pinball game engine utilizing oldschool pixel collisions and bitmaps for levels
+
