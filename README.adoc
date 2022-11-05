@@ -6,9 +6,18 @@ The engine has to be deterministic.
 
 
 
-== Physics
 
-=== Ball
+
+
+== Engine
+=== Physics
+Collision Layer:: 
++
+All collisions are handled pixel by pixel, we use a collection of spritemaps to calculate collisions.
++
+image::./docs/collisionmap.png[]
+
+
 
 
 

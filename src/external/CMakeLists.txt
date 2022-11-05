@@ -24,3 +24,13 @@ FetchContent_Declare(
   GIT_TAG 82dc2033e51b8323857c3ae1cf1f458b3a933c35
 )
 add_subdirectory(imgui-sfml)
+
+
+FetchContent_Declare(
+  json
+  GIT_REPOSITORY https://github.com/nlohmann/json.git
+  GIT_TAG a3e6e26dc83a726b292f5be0492fcc408663ce55
+)
+FetchContent_MakeAvailable(json)
+
+

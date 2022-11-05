@@ -13,8 +13,9 @@ target_include_directories(
 )
 
 
-target_link_libraries(pixie PUBLIC 
+target_link_libraries(pixie PRIVATE 
     ImGui-SFML::ImGui-SFML
+    nlohmann_json::nlohmann_json
     )
 
 # Copy DLLs needed for runtime on Windows

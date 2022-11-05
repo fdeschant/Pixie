@@ -5,6 +5,9 @@
 #include <imgui-SFML.h>
 #include <imgui.h>
 
+#include <SFML/Graphics/CircleShape.hpp>
+
+
 int main() {
     sf::RenderWindow window(sf::VideoMode(1280, 720), "ImGui + SFML = <3");
     window.setFramerateLimit(60);
@@ -22,10 +25,17 @@ int main() {
         }
 
         ImGui::SFML::Update(window, deltaClock.restart());
-
+        window.clear();
         ImGui::ShowDemoWindow();
 
-        window.clear();
+        // All Drawing goes here
+        sf::CircleShape circle(50.f);
+
+        circle.setFillColor(sf::Color(0, 255, 0));
+        window.draw(circle);
+        
+
+        // All drawing stops here
         ImGui::SFML::Render(window);
         window.display();
     }
