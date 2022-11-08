@@ -1,7 +1,7 @@
 add_subdirectory(external)
 
 
-add_executable(pixie pixie.cpp)
+add_executable(pixie pixie.cpp noise.hpp noise.cpp)
 
 
 set(CMAKE_CXX_STANDARD 20)
