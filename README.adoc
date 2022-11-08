@@ -3,7 +3,15 @@
 The idea is a heightmap generator
 
 
+== Requires CMake
 
+== Steps
+1. Clone repository
+2. mkdir build
+3. cd build
+4. cmake ..
+5. cmake --build .
+6. .\src\Debug\pixie.exe
 
 
 
