@@ -14,12 +14,12 @@
 #include "noise.hpp"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(640, 480), "Pixie - Mapper");
-    window.setFramerateLimit(60);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Pixie - Mapper");
+    window.setFramerateLimit(600);
     ImGui::SFML::Init(window);
     OpenSimplexNoise::Noise noise(1);
     int x =0,imgsize = 350;
-
+    uint32_t frameCount = 0;
     sf::Vector2f offset{0,0};
     sf::Vector2f zoom{0.00001,0.00001};
     sf::Vector2u windowSize = window.getSize();
@@ -35,7 +35,15 @@ int main() {
                 window.close();
             }
         }
-
+        if (frameCount < 500)
+        {
+            frameCount++;
+        }
+        else
+        {
+            window.close();
+        }
+        if (x >= 500) window.close();
         if (ImGui::IsKeyPressed(ImGui::GetKeyIndex(ImGuiKey_LeftArrow)))
         {
             offset.x--;
