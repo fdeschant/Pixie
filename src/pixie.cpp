@@ -104,7 +104,7 @@ int main() {
                 //ImGui::TableNextRow();
                 for(int j = 0; j < windowSize.y; ++j)
                 {
-                    double n = ( noise.eval((offset.x + (double)i)*zoom.x*windowSize.x ,(offset.y + (double)j) * zoom.y * windowSize.y,(double)0.001)+1)/2;
+                    double n = ( noise.eval((offset.x + (double)i)*zoom.x*windowSize.x ,(offset.y + (double)j) * zoom.y * windowSize.y)+1)/2;
                     uint8_t r = n*256;
                     if(r > 128)
                     image.setPixel(i,j,sf::Color(r,r,r));

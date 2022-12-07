@@ -38,9 +38,9 @@ namespace OpenSimplexNoise
 
     std::array<short, 256> m_perm;
     std::array<short, 256> m_permGradIndex3d;
-    std::array<char, 16> m_gradients2d;
-    std::array<char, 72> m_gradients3d;
-    std::array<char, 256> m_gradients4d;
+    const std::array<char, 16> m_gradients2d;
+    const std::array<char, 72> m_gradients3d;
+    const std::array<char, 256> m_gradients4d;
     double extrapolate(int xsb, int ysb, double dx, double dy) const;
     double extrapolate(int xsb, int ysb, int zsb, double dx, double dy, double dz) const;
     double extrapolate(int xsb, int ysb, int zsb, int wsb, double dx, double dy, double dz, double dw) const;
